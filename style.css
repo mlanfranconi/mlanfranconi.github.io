@@ -48,9 +48,9 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1100px; /* Reducido para acortar las líneas de texto */
     margin: 0 auto;
-    padding: 0 60px; /* Margen lateral consistente */
+    padding: 0 40px; 
 }
 em {
     font-style: italic;
@@ -74,9 +74,9 @@ strong {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1100px; /* Reducido para coincidir con el container */
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 .nav-links {
     list-style: none;
@@ -175,8 +175,8 @@ p:last-child {
 /* --- SECCIONES DE CONTENIDO CON IMAGEN --- */
 .content-row { display: flex; align-items: center; gap: 80px; }
 .content-row.reverse { flex-direction: row-reverse; }
-.text-column { flex: 1.4; text-align: left; } /* Más espacio para el texto */
-.image-column { flex: 1; } /* Menos espacio para la imagen */
+.text-column { flex: 1.6; text-align: left; } /* Más espacio para el texto */
+.image-column { flex: 0.8; } /* Menos espacio para la imagen */
 .content-image { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .intro-heading {
     font-family: 'Bristol', sans-serif;
@@ -194,7 +194,7 @@ p:last-child {
 .work-steps-container { 
     display: flex; 
     gap: 40px; 
-    margin-top: 60px; /* Más espacio entre título y subtítulos */
+    margin-top: 80px; /* Espacio aumentado */
 }
 .work-step { flex: 1; }
 .work-step h3 {
@@ -218,7 +218,7 @@ p:last-child {
 
 /* --- FOOTER (HABLEMOS) --- */
 .footer-section { text-align: center; }
-.footer-section h2 { margin-bottom: 60px; } /* Más espacio */
+.footer-section h2 { margin-bottom: 80px; } /* Espacio aumentado */
 .contact-options { display: flex; justify-content: center; gap: 60px; }
 .contact-box { flex: 1; max-width: 400px; }
 .contact-box h3 {
