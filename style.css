@@ -48,9 +48,9 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1200px; 
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 em { font-style: italic; }
 strong { font-weight: 600; }
@@ -70,9 +70,9 @@ strong { font-weight: 600; }
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 .nav-links {
     list-style: none;
@@ -90,21 +90,17 @@ strong { font-weight: 600; }
     font-size: 1rem;
     padding-bottom: 5px;
     position: relative;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    transition: font-weight 0.3s ease;
 }
-.nav-links a:hover {
-    color: #000000;
-    font-weight: 600;
-}
+.nav-links a:hover,
 .nav-links a.active-link {
-  color: #000000;
   font-weight: 600;
   text-decoration: none;
 }
 .lang-dropdown {
     position: relative;
     flex-shrink: 0; 
-    margin-left: 30px;
+    margin-left: 50px;
 }
 .lang-button { background-color: transparent; border: 1px solid #ccc; padding: 8px 12px; font-family: 'DM Sans', sans-serif; font-weight: 600; border-radius: 5px; cursor: pointer; }
 .lang-options { display: none; position: absolute; background-color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 5px; margin-top: 5px; right: 0; }
@@ -122,21 +118,22 @@ main > .container > section, .footer-section .container {
 .footer-section { border-bottom: none; }
 h2.section-title {
     font-family: 'Helvetica', sans-serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     color: #000;
     margin-bottom: 40px;
     text-align: center;
+    letter-spacing: -1.5px;
 }
 p {
     font-size: 1.1rem;
-    margin-bottom: 1.2em;
+    margin-bottom: 1em;
     letter-spacing: -0.5px;
-    line-height: 1.6;
+    line-height: 1.45;
 }
 p:last-child { margin-bottom: 0; }
 
-/* --- SECCIÓN HERO CON LOGO SOBRE CARRUSEL --- */
+/* --- SECCIÓN HERO --- */
 .hero-section {
     height: 90vh;
     position: relative;
@@ -144,6 +141,7 @@ p:last-child { margin-bottom: 0; }
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #dcdcdc;
+    overflow: hidden; /* Oculta el exceso del zoom */
 }
 .impact-carousel {
     position: absolute;
@@ -153,12 +151,11 @@ p:last-child { margin-bottom: 0; }
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* La animación se aplica con JS para reiniciarla en cada foto */
 }
 /* Clases para posicionar imágenes específicas del header */
-.impact-carousel.brindis-pos { background-position: center 20%; } /* Muestra más de arriba (baja la imagen) */
-.impact-carousel.cena-pos { background-position: center 80%; } /* Muestra más de abajo (sube la imagen) */
-
+.impact-carousel.brindis-pos { background-position: center 20%; }
+.impact-carousel.cena-pos { background-position: center 80%; }
 .hero-overlay {
     position: relative;
     z-index: 2;
@@ -166,17 +163,18 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-overlay h1 {
     font-family: 'Le Petit Cochon', sans-serif;
-    font-size: 10vw;
+    font-size: 9vw;
     color: #FFFFFF;
     line-height: 0.8;
     letter-spacing: 4px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
-@keyframes zoomAndFade {
+/* Animación de FADE + ZOOM IN restaurada */
+@keyframes zoomInAndFade {
     0% { transform: scale(1); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: scale(1.05); opacity: 0; }
+    12.5% { opacity: 1; }
+    87.5% { opacity: 1; transform: scale(1.05); } /* Zoom progresivo durante la visibilidad */
+    100% { opacity: 0; transform: scale(1.05); }
 }
 
 
@@ -191,33 +189,34 @@ p:last-child { margin-bottom: 0; }
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .tagline-sub {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
-    line-height: 1.6;
+    line-height: 1.45;
 }
 .tagline-sub p {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
 /* --- SECCIÓN QUIÉN LO ORGANIZA --- */
 .content-row {
     display: flex;
-    align-items: center;
-    gap: 80px;
+    align-items: flex-start;
+    gap: 60px;
 }
 .text-column {
-    flex: 1.2;
+    flex: 1.5;
     text-align: left;
 }
 .image-column {
-    flex: 0.8;
+    flex: 1;
 }
 #quien-lo-organiza .section-title {
     text-align: left;
+    margin-top: 0;
 }
 .section-subtitle {
     font-family: 'DM Sans', sans-serif;
@@ -225,8 +224,8 @@ p:last-child { margin-bottom: 0; }
     font-size: 1.2rem;
     color: #000;
     text-align: left;
-    margin-top: -20px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .content-image {
     width: 100%;
@@ -235,7 +234,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 
-/* --- CARRUSEL GALERÍA (RESTAURADO) --- */
+/* --- CARRUSEL GALERÍA --- */
 .carousel-section { 
     padding: 80px 0;
     border-bottom: 1px solid #dcdcdc;
@@ -279,7 +278,7 @@ p:last-child { margin-bottom: 0; }
 .work-steps-container { 
     display: flex; 
     gap: 40px; 
-    margin-top: 60px;
+    margin-top: 80px;
 }
 .work-step { flex: 1; text-align: left; }
 .work-step h3 {
@@ -296,7 +295,7 @@ p:last-child { margin-bottom: 0; }
 
 /* --- FOOTER (HABLEMOS) --- */
 .footer-section { text-align: center; }
-.footer-section h2 { margin-bottom: 60px; }
+.footer-section h2 { margin-bottom: 80px; }
 .contact-options { display: flex; justify-content: center; gap: 60px; }
 .contact-box { flex: 1; max-width: 400px; }
 .contact-box h3 {
@@ -327,8 +326,8 @@ p:last-child { margin-bottom: 0; }
     .nav-links { gap: 20px; }
 }
 @media (max-width: 768px) {
-    .hero-logo h1 { font-size: 18vw; }
-    .content-row { flex-direction: column !important; } /* Para que la foto se ponga arriba o abajo */
+    .hero-section h1 { font-size: 15vw; }
+    .content-row { flex-direction: column !important; }
     #quien-lo-organiza.content-row { flex-direction: column !important; }
     .work-steps-container, .contact-options { flex-direction: column; gap: 40px; }
     .main-nav { flex-direction: column; gap: 20px; }

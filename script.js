@@ -6,24 +6,21 @@ document.addEventListener("DOMContentLoaded", function() {
             nav_organizer: "QUIÉN LO ORGANIZA",
             nav_how_it_works: "CÓMO FUNCIONA",
             nav_contact: "¡HABLEMOS!",
-            tagline_main: "COMPANY RETREATS CON PROPÓSITO Y CON IMPACTO REAL.",
-            tagline_sub1: "Más de 5 encuentros organizados con grupos de hasta 60 personas de diferentes lugares del mundo.",
-            tagline_sub2: "Desde encuentros de equipos completos hasta eventos de liderazgo. Creando <strong>experiencias que inspiran, conectan y dejan huella</strong>, en los rincones más lindos de Argentina.",
-            organizer_title: "¿QUIÉN LO ORGANIZA?",
+            tagline_main: "Company retreats con propósito y con impacto real.",
+            tagline_sub_merged: "Para equipos completos o líderes, híbridos o remotos, distribuidos por el mundo. <strong>Experiencias que inspiran, conectan y transforman</strong>, en entornos que invitan a frenar, recargar y renovar el sentido de trabajar en equipo.",
+            organizer_title: "¿Quién lo organiza?",
             organizer_subtitle: "¡Yo, Martina!",
-            organizer_p1: "Hace más de 10 años que trabajo en el mundo IT, construyendo culturas, acompañando equipos y creando experiencias que hacen del trabajo algo más <strong>humano y disfrutable</strong>.",
-            organizer_p2: "Siempre me movió lo mismo: conectar con las personas y generar espacios donde se sientan escuchadas, acompañadas, valoradas y libres de ser ellas mismas.",
-            organizer_p3: "Desde hace 5 años, lo hago con la computadora en la mochila mientras descubro el mundo.",
-            organizer_p4: "Hoy combino todo lo que aprendí en People Experience con mi pasión por viajar, organizando company retreats para equipos híbridos y remotos en lugares increíbles que recargan y renuevan.",
-            organizer_p5: "Y también lo hago desde lo que soy: sociable, curiosa, creativa y aventurera, con la convicción profunda de que encuentros así pueden ser <strong>transformadores</strong>.",
-            how_it_works_title: "¿CÓMO FUNCIONA?",
-            step1_heading: "CONSULTORÍA ESTRATÉGICA",
-            step1_p: "Nos sentamos a entender qué necesita tu equipo *hoy*. Armo un diagnóstico de la cultura y los desafíos actuales, y a partir de ahí definimos juntos los objetivos del encuentro y la idea, el concepto, que nos van a guíar todo el camino.",
-            step2_heading: "DISEÑO DE LA EXPERIENCIA",
+            organizer_p1: "Hace 10 años que trabajo en IT, construyendo culturas, acompañando equipos y diseñando experiencias que hacen del trabajo algo más <strong>humano y más disfrutable</strong>. Siempre me movió lo mismo: conectar con las personas y crear espacios donde se sientan escuchadas, acompañadas, valoradas y libres de ser ellas mismas.",
+            organizer_p2: "Desde hace 5 años, lo hago con la computadora en la mochila mientras recorro el mundo.",
+            organizer_p3: "<strong>Hoy combino todo lo que aprendí en mi recorrido por People Experience con mi pasión por viajar, para darle vida a Hype.</strong> Lo hago con una mirada estratégica, que me permite entender qué necesita un equipo para funcionar mejor, y con la experiencia de haber liderado equipos y organizado viajes alrededor del mundo. Y también lo hago desde lo que soy, en esencia: sociable, enérgica, creativa, curiosa y aventurera.",
+            how_it_works_title: "¿Cómo funciona?",
+            step1_heading: "1. CONSULTORÍA ESTRATÉGICA",
+            step1_p: "Nos sentamos a entender qué necesita tu equipo hoy. Armo un diagnóstico de la cultura y los desafíos actuales, y a partir de ahí definimos juntos los objetivos del encuentro y la idea, el concepto, que nos van a guíar todo el camino.",
+            step2_heading: "2. DISEÑO DE LA EXPERIENCIA",
             step2_p: "Me encargo de todo, de punta a punta. Busco el destino perfecto, diseño la agenda, y propongo las actividades que nos van a ayudar a cumplir los objetivos. Me ocupo de la logística y los proveedores para que no tengas que preocuparte por nada.",
-            step3_heading: "IMPLEMENTACIÓN PRESENCIAL",
+            step3_heading: "3. IMPLEMENTACIÓN PRESENCIAL",
             step3_p: "Acompaño al equipo durante el encuentro. Llevo los tiempos de la agenda, facilito las dinámicas, y me aseguro que la experiencia fluya de la mejor manera. Soy una más, dedicada a que todo salga increíble.",
-            contact_title: "¡HABLEMOS!",
+            contact_title: "¡Hablemos!",
             contact1_heading: "ESCRIBIME",
             contact1_cta: "Si ya tenés una idea en mente, mandame un email a hype@gmail.com",
             contact2_heading: "AGENDÁ UNA CALL",
@@ -33,24 +30,21 @@ document.addEventListener("DOMContentLoaded", function() {
             nav_organizer: "WHO ORGANIZES IT?",
             nav_how_it_works: "HOW IT WORKS",
             nav_contact: "LET'S TALK!",
-            tagline_main: "COMPANY RETREATS WITH PURPOSE AND REAL IMPACT.",
-            tagline_sub1: "Over 5 events organized with groups of up to 60 people from different parts of the world.",
-            tagline_sub2: "From full team gatherings to leadership events. Creating <strong>experiences that inspire, connect, and leave a mark</strong>, in the most beautiful corners of Argentina.",
-            organizer_title: "WHO ORGANIZES IT?",
+            tagline_main: "Company retreats with purpose and real impact.",
+            tagline_sub_merged: "For full teams or leaders, hybrid or remote, distributed around the world. <strong>Experiences that inspire, connect, and transform</strong>, in environments that invite you to slow down, recharge, and renew the sense of teamwork.",
+            organizer_title: "Who organizes it?",
             organizer_subtitle: "Me, Martina!",
-            organizer_p1: "For over 10 years, I've been working in the IT world, building cultures, supporting teams, and creating experiences that make work more <strong>human and enjoyable</strong>.",
-            organizer_p2: "I've always been driven by the same thing: connecting with people and creating spaces where they feel heard, supported, valued, and free to be themselves.",
-            organizer_p3: "For the last 5 years, I've been doing it with my laptop in my backpack while discovering the world.",
-            organizer_p4: "Today, I combine everything I've learned in People Experience with my passion for travel, organizing company retreats for hybrid and remote teams in incredible places that recharge and renew.",
-            organizer_p5: "And I also do it from who I am: sociable, curious, creative, and adventurous, with the deep conviction that such encounters can be <strong>transformative</strong>.",
-            how_it_works_title: "HOW IT WORKS",
-            step1_heading: "STRATEGIC CONSULTING",
-            step1_p: "We sit down to understand what your team needs *today*. I diagnose the culture and current challenges, and from there, we define the goals for the retreat and the core idea, the concept, that will guide us all the way.",
-            step2_heading: "EXPERIENCE DESIGN",
+            organizer_p1: "For 10 years, I've been working in IT building cultures, supporting teams, and designing experiences that make work more <strong>human and more enjoyable</strong>. I've always been driven by the same thing: connecting with people and creating spaces where they feel heard, supported, valued, and free to be themselves.",
+            organizer_p2: "For the last 5 years, I've been doing it with my laptop in my backpack while traveling the world.",
+            organizer_p3: "<strong>Today, I combine everything I've learned in my People Experience journey with my passion for travel to bring Hype to life.</strong> I do it with a strategic perspective that allows me to understand what a team needs to function better, and with the experience of having led teams and organized trips around the world. And I also do it from who I am, in essence: sociable, energetic, creative, curious, and adventurous.",
+            how_it_works_title: "How does it work?",
+            step1_heading: "1. STRATEGIC CONSULTING",
+            step1_p: "We sit down to understand what your team needs today. I diagnose the culture and current challenges, and from there, we define the goals for the retreat and the core idea, the concept, that will guide us all the way.",
+            step2_heading: "2. EXPERIENCE DESIGN",
             step2_p: "I take care of everything, from start to finish. I find the perfect destination, design the agenda, and propose activities that will help us meet our goals. I handle logistics and suppliers so you don't have to worry about a thing.",
-            step3_heading: "ON-SITE IMPLEMENTATION",
+            step3_heading: "3. ON-SITE IMPLEMENTATION",
             step3_p: "I accompany the team during the retreat. I manage the schedule, facilitate dynamics, and make sure the experience flows in the best way possible. I'm one more member of the team, dedicated to making everything incredible.",
-            contact_title: "LET'S TALK!",
+            contact_title: "Let's talk!",
             contact1_heading: "WRITE ME",
             contact1_cta: "If you already have an idea in mind, send me an email at hype@gmail.com",
             contact2_heading: "SCHEDULE A CALL",
@@ -122,11 +116,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         impactCarousel.style.animation = 'none';
         void impactCarousel.offsetWidth; 
-        impactCarousel.style.animation = `zoomAndFade ${3}s ease-in-out forwards`;
+        impactCarousel.style.animation = `zoomAndFade 4s ease-in-out forwards`;
         currentImpactIndex = (currentImpactIndex + 1) % impactImages.length;
     }
     if (impactCarousel) {
-        setInterval(showNextImpactImage, 3000); // Cambia cada 3 segundos
+        setInterval(showNextImpactImage, 4000); // Cambia cada 4 segundos
         showNextImpactImage();
     }
 
@@ -136,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const galleryImages = [
         'images/web/Puente.jpg', 'images/web/Manos.png', 'images/web/Escalada.jpg', 'images/web/Sombra.JPG', 
         'images/web/Fiesta.JPG', 'images/web/Risas.JPG', 'images/web/Olimpiadas.png', 'images/web/Presentacion.JPG', 
-        'images/web/Mas risas.JPG', 'images/web/Ronda.png'
+        'images/web/Mas risas.JPG', 'images/web/Ronda.png', 'images/web/Laptop.jpg'
     ];
 
     if (galleryCarousel) {
@@ -185,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         function startAutoSlide() {
             clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(prevSlide, 3000);
+            autoSlideInterval = setInterval(nextSlide, 3000); // Movimiento automático hacia adelante
         }
 
         nextBtn.addEventListener('click', () => { clearInterval(autoSlideInterval); nextSlide(); startAutoSlide(); });
