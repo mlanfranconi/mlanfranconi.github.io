@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- LÓGICA CARRUSEL DE IMPACTO ---
     const impactCarousel = document.getElementById('impact-carousel');
     const impactImages = [
-        'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting-1.jpg', 
+        'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting1.jpg', 
         'images/header/brindis.jpg', 'images/header/charla.jpg', 'images/header/cena.jpg'
     ];
     let currentImpactIndex = 0;
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const galleryImages = [
         'images/web/puente.jpg', 'images/web/manos.png', 'images/web/escalada.jpg', 'images/web/sombra.jpg', 
         'images/web/fiesta.jpg', 'images/web/risas.jpg', 'images/web/olimpiadas.png', 'images/web/presentacion.jpg', 
-        'images/web/mas-risas.jpg', 'images/web/ronda.png', 'images/web/laptop.jpg'
+        'images/web/masrisas.jpg', 'images/web/ronda.png', 'images/web/laptop.jpg'
     ];
 
     if (galleryCarousel) {
