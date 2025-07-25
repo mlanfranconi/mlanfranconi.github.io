@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- LÓGICA CARRUSEL DE IMPACTO ---
     const impactCarousel = document.getElementById('impact-carousel');
     const impactImages = [
-        'images/header/Grupal.jpg', 'images/header/Rafting.jpg', 'images/header/Rafting 1.jpg', 
-        'images/header/Brindis.JPG', 'images/header/Charla.JPG', 'images/header/Cena.jpg'
+        'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting-1.jpg', 
+        'images/header/brindis.jpg', 'images/header/charla.jpg', 'images/header/cena.jpg'
     ];
     let currentImpactIndex = 0;
 
@@ -108,9 +108,9 @@ document.addEventListener("DOMContentLoaded", function() {
         
         impactCarousel.classList.remove('brindis-pos', 'cena-pos');
 
-        if (currentImageSrc.includes('Brindis.JPG')) {
+        if (currentImageSrc.includes('brindis.jpg')) {
             impactCarousel.classList.add('brindis-pos');
-        } else if (currentImageSrc.includes('Cena.jpg')) {
+        } else if (currentImageSrc.includes('cena.jpg')) {
             impactCarousel.classList.add('cena-pos');
         }
 
@@ -128,9 +128,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- LÓGICA CARRUSEL GALERÍA (RESTAURADO) ---
     const galleryCarousel = document.querySelector('#portfolio .carousel-slide');
     const galleryImages = [
-        'images/web/Puente.jpg', 'images/web/Manos.png', 'images/web/Escalada.jpg', 'images/web/Sombra.JPG', 
-        'images/web/Fiesta.JPG', 'images/web/Risas.JPG', 'images/web/Olimpiadas.png', 'images/web/Presentacion.JPG', 
-        'images/web/Mas risas.JPG', 'images/web/Ronda.png', 'images/web/Laptop.jpg'
+        'images/web/puente.jpg', 'images/web/manos.png', 'images/web/escalada.jpg', 'images/web/sombra.jpg', 
+        'images/web/fiesta.jpg', 'images/web/risas.jpg', 'images/web/olimpiadas.png', 'images/web/presentacion.jpg', 
+        'images/web/mas-risas.jpg', 'images/web/ronda.png', 'images/web/laptop.jpg'
     ];
 
     if (galleryCarousel) {
