@@ -4,19 +4,15 @@
     src: url('fonts/Le petit.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Bristol';
-    src: url('fonts/Bristol.otf') format('opentype');
-}
-@font-face {
     font-family: 'DM Sans';
     src: url('fonts/DM sans.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: normal; /* 400 */
     font-style: normal;
 }
 @font-face {
     font-family: 'DM Sans';
     src: url('fonts/DM sans italic.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: normal; /* 400 */
     font-style: italic;
 }
 @font-face {
@@ -25,9 +21,27 @@
     font-weight: 600;
     font-style: normal;
 }
+
+/* --- NUEVAS FUENTES --- */
 @font-face {
-    font-family: 'Helvetica';
-    src: url('fonts/Helvetica.ttf') format('truetype');
+    font-family: 'Raleway';
+    src: url('fonts/ralewaylight.ttf') format('truetype');
+    font-weight: 300; /* Light */
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/ralewaymedium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/ralewaysemibold.ttf') format('truetype');
+    font-weight: 600; /* Semibold */
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/ralewaybold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
 }
 
 
@@ -41,7 +55,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif; /* Cambio 9: Fuente por defecto para párrafos */
     background-color: #ebebeb;
     color: #000000;
     overflow-x: hidden;
@@ -58,11 +72,20 @@ strong { font-weight: 600; }
 
 /* --- BARRA DE NAVEGACIÓN --- */
 .main-header {
-    background-color: #ebebeb;
-    padding: 20px 0;
-    position: sticky;
+    /* Cambio 2: Header posicionado sobre el hero */
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+    padding: 20px 0;
+    background-color: transparent;
+    transition: background-color 0.4s ease, border-bottom 0.4s ease;
+}
+/* Clase que se añade con JS al hacer scroll */
+.main-header.scrolled {
+    position: fixed;
+    background-color: #ebebeb;
     border-bottom: 1px solid #dcdcdc;
 }
 .main-nav {
@@ -74,57 +97,98 @@ strong { font-weight: 600; }
     margin: 0 auto;
     padding: 0 40px;
 }
+
+/* Cambio 1: Estilo y tamaño del logo */
+.logo-nav a {
+    font-family: 'Le Petit Cochon', sans-serif;
+    font-size: 2.5rem; /* Tamaño ajustado */
+    color: #FFFFFF; /* Color inicial blanco */
+    text-decoration: none;
+    letter-spacing: 4px;
+    transition: color 0.4s ease;
+}
+.main-header.scrolled .logo-nav a {
+    color: #000000; /* Color del logo al hacer scroll */
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0;
+    gap: 35px; /* Espacio entre links */
 }
 .nav-links a {
-    font-family: 'DM Sans', sans-serif;
+    /* Cambio 3: Estilo de los links de navegación */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300; /* Light */
     text-decoration: none;
-    color: #000000;
-    font-weight: normal;
-    font-size: 1rem;
-    padding-bottom: 5px;
-    position: relative;
-    transition: font-weight 0.3s ease;
+    color: #FFFFFF; /* Color blanco */
+    font-size: 0.9rem;
+    letter-spacing: -0.05em; /* Equivalente a -50 en software de diseño */
+    text-transform: uppercase;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
+/* Cambio de color de links al hacer scroll */
+.main-header.scrolled .nav-links a,
+.main-header.scrolled .lang-button {
+    color: #000000;
+}
+
 .nav-links a:hover,
 .nav-links a.active-link {
-  font-weight: 600;
-  text-decoration: none;
+  font-weight: 500; /* Un poco más de grosor al estar activo o en hover */
 }
+
 .lang-dropdown {
     position: relative;
-    flex-shrink: 0; 
-    margin-left: 50px;
+    margin-left: 20px;
 }
-.lang-button { background-color: transparent; border: 1px solid #ccc; padding: 8px 12px; font-family: 'DM Sans', sans-serif; font-weight: 600; border-radius: 5px; cursor: pointer; }
+.lang-button {
+    /* Cambio 3: Estilo del botón de idioma */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.4s ease, border-color 0.4s ease;
+}
+.main-header.scrolled .lang-button {
+    border-color: #000;
+}
+
 .lang-options { display: none; position: absolute; background-color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 5px; margin-top: 5px; right: 0; }
 .lang-options.show { display: block; }
-.lang-option { color: black; padding: 10px 15px; text-decoration: none; display: block; }
+.lang-option { color: black; padding: 10px 15px; text-decoration: none; display: block; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 0.9rem; }
 .lang-option:hover { background-color: #f1f1f1; }
 
 
 /* --- ESTILOS GENERALES DE SECCIONES --- */
-main > .container > section, .footer-section .container {
+main > .container > section, .footer-section .container, .carousel-section {
     padding-top: 120px;
     padding-bottom: 120px;
     border-bottom: 1px solid #dcdcdc;
 }
+.carousel-section {
+     padding-top: 80px; 
+     padding-bottom: 80px; 
+}
 .footer-section { border-bottom: none; }
+
+/* Cambio 6: Estilo para títulos de sección */
 h2.section-title {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 2.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600; /* Semibold */
+    font-size: 2rem;
     text-transform: uppercase;
     color: #000;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
-    letter-spacing: -1.5px;
+    letter-spacing: -0.05em;
 }
+/* Cambio 9: Estilo para cuerpos de texto (se mantiene DM Sans) */
 p {
     font-size: 1.1rem;
     margin-bottom: 1em;
@@ -135,13 +199,14 @@ p:last-child { margin-bottom: 0; }
 
 /* --- SECCIÓN HERO --- */
 .hero-section {
-    height: 90vh;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border-bottom: 1px solid #dcdcdc;
-    overflow: hidden; /* Oculta el exceso del zoom */
+    overflow: hidden;
 }
 .impact-carousel {
     position: absolute;
@@ -151,80 +216,82 @@ p:last-child { margin-bottom: 0; }
     height: 100%;
     background-size: cover;
     background-position: center;
-    /* La animación se aplica con JS para reiniciarla en cada foto */
 }
-/* Clases para posicionar imágenes específicas del header */
 .impact-carousel.brindis-pos { background-position: center 20%; }
 .impact-carousel.cena-pos { background-position: center 80%; }
 .hero-overlay {
     position: relative;
     z-index: 2;
-    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
 }
+/* Cambio 4: Estilo del Headline */
 .hero-overlay h1 {
-    font-family: 'Le Petit Cochon', sans-serif;
-    font-size: 9vw;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 4.5vw; /* Tamaño más chico y responsivo */
     color: #FFFFFF;
-    line-height: 0.8;
-    letter-spacing: 4px;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
-/* Animación de FADE + ZOOM IN restaurada */
+/* Cambio 5: Estilo del Subheadline */
+.hero-overlay p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300; /* Light */
+    font-size: 1.2rem; /* Tamaño más grande */
+    color: #FFFFFF;
+    line-height: 1.4;
+    letter-spacing: -0.05em;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
 @keyframes zoomAndFade {
     0% { transform: scale(1); opacity: 0; }
     12.5% { opacity: 1; }
-    87.5% { opacity: 1; transform: scale(1.05); } /* Zoom progresivo durante la visibilidad */
+    87.5% { opacity: 1; transform: scale(1.05); }
     100% { opacity: 0; transform: scale(1.05); }
 }
 
 
-/* --- SECCIÓN TAGLINE --- */
-.tagline-section {
-    padding: 80px 0;
-    text-align: center;
-    border-bottom: 1px solid #dcdcdc;
+/* --- SECCIÓN POR QUÉ HYPE --- */
+/* Cambio 8: Grid de 3 columnas */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
-.tagline-main {
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-}
-.tagline-sub {
-    max-width: 800px;
-    margin: 0 auto;
+.feature-item { text-align: left; }
+/* Cambio 7: Estilo de subtítulos (aplica a todos los h3 de features y steps) */
+.feature-item h3, .work-step h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500; /* Medium */
     font-size: 1.1rem;
-    line-height: 1.45;
-}
-.tagline-sub p {
-    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: #000000;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-/* --- SECCIÓN QUIÉN LO ORGANIZA --- */
+
+/* --- SECCIÓN QUIÉN ESTÁ DETRÁS --- */
 .content-row {
     display: flex;
     align-items: flex-start;
     gap: 60px;
 }
-.text-column {
-    flex: 1.5;
-    text-align: left;
-}
-.image-column {
-    flex: 1;
-}
-#quien-lo-organiza .section-title {
-    text-align: left;
-    margin-top: 0;
-}
+.text-column { flex: 1.5; text-align: left; }
+.image-column { flex: 1; }
+.content-row .section-title { text-align: left; margin-top: 0; }
 .section-subtitle {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif; /* Mantenemos DM Sans como en el original */
     font-weight: 600;
     font-size: 1.2rem;
     color: #000;
-    text-align: left;
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 .content-image {
@@ -235,102 +302,114 @@ p:last-child { margin-bottom: 0; }
 
 
 /* --- CARRUSEL GALERÍA --- */
-.carousel-section { 
-    padding: 80px 0;
-    border-bottom: 1px solid #dcdcdc;
-}
-.carousel-container { 
-    max-width: 100%; 
-    margin: auto; 
-    overflow: hidden; 
-    position: relative; 
-}
-.carousel-slide { 
-    display: flex; 
-    transition: transform 0.5s ease-in-out;
-}
-.carousel-slide img { 
-    width: 450px; 
-    height: 500px; 
-    object-fit: cover; 
-    padding: 0 10px; 
-    flex-shrink: 0; 
-}
-.carousel-btn { 
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    background-color: rgba(255, 255, 255, 0.7); 
-    border: none; 
-    cursor: pointer; 
-    padding: 10px; 
-    width: 45px; 
-    height: 45px; 
-    border-radius: 50%; 
-    font-size: 24px; 
-    z-index: 10; 
-}
+.carousel-container { max-width: 100%; margin: auto; overflow: hidden; position: relative; }
+.carousel-slide { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide img { width: 450px; height: 500px; object-fit: cover; padding: 0 10px; flex-shrink: 0; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.7); border: none; cursor: pointer; padding: 10px; width: 45px; height: 45px; border-radius: 50%; font-size: 24px; z-index: 10; }
 .prev-btn { left: 15px; }
 .next-btn { right: 15px; }
 
 
 /* --- SECCIÓN CÓMO FUNCIONA --- */
-.work-steps-container { 
-    display: flex; 
-    gap: 40px; 
-    margin-top: 80px;
+.work-steps-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
 }
-.work-step { flex: 1; text-align: left; }
-.work-step h3 {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #000000;
-    letter-spacing: -0.5px;
-    line-height: 1;
-    margin-bottom: 20px;
-}
+.work-step { text-align: left; }
 
 
 /* --- FOOTER (HABLEMOS) --- */
 .footer-section { text-align: center; }
-.footer-section h2 { margin-bottom: 80px; }
-.contact-options { display: flex; justify-content: center; gap: 60px; }
-.contact-box { flex: 1; max-width: 400px; }
-.contact-box h3 {
+.contact-intro { max-width: 800px; margin: 0 auto 60px auto; }
+
+/* Cambio 11: Estilos del nuevo formulario */
+.contact-form {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+.form-group {
+    flex: 1;
+    position: relative;
+}
+.form-group.full-width {
+    flex-basis: 100%;
+}
+.contact-form label {
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #aaaaaa;
+    background-color: transparent;
+    padding: 10px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #000000;
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.submit-btn {
+    display: block;
+    margin: 40px auto 0 auto;
+    padding: 15px 50px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    font-size: 1rem;
     text-transform: uppercase;
-    color: #000000;
-    letter-spacing: -0.5px;
-    line-height: 1;
-    margin-bottom: 20px;
+    color: #FFFFFF;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #333333;
 }
 
 
 /* --- ANIMACIONES --- */
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
-.work-step:nth-child(2) { transition-delay: 0.2s; }
-.work-step:nth-child(3) { transition-delay: 0.4s; }
-.contact-box:nth-child(2) { transition-delay: 0.2s; }
+.feature-item:nth-child(2), .work-step:nth-child(2) { transition-delay: 0.2s; }
+.feature-item:nth-child(3), .work-step:nth-child(3) { transition-delay: 0.4s; }
+.feature-item:nth-child(5) { transition-delay: 0.2s; }
+.feature-item:nth-child(6) { transition-delay: 0.4s; }
 
 
 /* --- RESPONSIVIDAD --- */
 @media (max-width: 900px) {
     .container, .main-nav { padding: 0 30px; }
-    .main-header { padding: 15px 0; }
-    .lang-dropdown { right: 30px; }
-    .nav-links { gap: 20px; }
+    h2.section-title { font-size: 1.8rem; }
+    .hero-overlay h1 { font-size: 8vw; }
+    .features-grid, .work-steps-container { grid-template-columns: 1fr 1fr; } /* 2 columnas en tablet */
+    .content-row { flex-direction: column; }
+    .form-row { flex-direction: column; gap: 25px; margin-bottom: 0; }
+    .form-group { margin-bottom: 25px; }
 }
 @media (max-width: 768px) {
-    .hero-section h1 { font-size: 15vw; }
-    .content-row { flex-direction: column !important; }
-    #quien-lo-organiza.content-row { flex-direction: column !important; }
-    .work-steps-container, .contact-options { flex-direction: column; gap: 40px; }
-    .main-nav { flex-direction: column; gap: 20px; }
-    .nav-links { justify-content: space-between; }
-    .lang-dropdown { position: static; }
+    .main-nav { flex-direction: column; gap: 15px; }
+    .hero-overlay h1 { font-size: 12vw; }
+    .hero-overlay p { font-size: 1rem; }
+    .features-grid, .work-steps-container { grid-template-columns: 1fr; gap: 40px; } /* 1 columna en móvil */
+    .carousel-slide img { width: 320px; height: 400px; }
 }
