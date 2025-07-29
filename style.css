@@ -60,7 +60,7 @@ body {
 }
 .container {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -181,8 +181,8 @@ main > .container > section, .footer-section .container, .carousel-section {
     border-bottom: 1px solid #dcdcdc;
 }
 .carousel-section {
-     padding-top: 80px; 
-     padding-bottom: 80px; 
+     padding-top: 80px;
+     padding-bottom: 80px;
 }
 .footer-section { border-bottom: none; }
 h2.section-title {
@@ -301,17 +301,17 @@ p:last-child { margin-bottom: 0; }
     gap: 60px;
 }
 .text-column {
-    flex: 1.5; 
+    flex: 1.5;
     text-align: left;
     padding-right: 4rem;
 }
-.image-column { 
-    flex: 1; 
+.image-column {
+    flex: 1;
 }
-.content-row .section-title { 
-    text-align: left; 
+.content-row .section-title {
+    text-align: left;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Ajuste final: Más espacio entre título y subtítulo */
 }
 .section-subtitle {
     font-family: 'DM Sans', sans-serif;
