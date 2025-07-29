@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // --- LÓGICA DEL HEADER AL HACER SCROLL ---
-    // Cambio 2: Añadir clase 'scrolled' al header para cambiar su estilo
     const header = document.querySelector('.main-header');
     if (header) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { // Cambia el estilo después de scrollear 50px
+            if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -15,15 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // --- 1. LÓGICA DE TRADUCCIÓN (i18n) --- 
-    // (Sin cambios en esta sección, se mantiene igual)
     const translations = {
         es: {
             nav_why: "POR QUÉ HYPE",
             nav_how_it_works: "CÓMO FUNCIONA",
             nav_organizer: "QUIÉN ESTÁ DETRÁS",
             nav_contact: "¡HABLEMOS!",
-            hero_headline: "ENCUENTROS QUE TRANSFORMAN EQUIPOS.",
-            hero_subheadline: "PLANIFICACIÓN DE COMPANY RETREATS CON PROPÓSITO, IMPACTO Y CONEXIÓN HUMANA, EN LOS MEJORES DESTINOS DE LATINOAMÉRICA.",
+            hero_headline: "ENCUENTROS QUE<br>TRANSFORMAN EQUIPOS", 
+            hero_subheadline: "PLANIFICACIÓN DE COMPANY RETREATS CON <strong>PROPÓSITO, IMPACTO Y CONEXIÓN HUMANA</strong>,<br>EN LOS MEJORES DESTINOS DE LATINOAMÉRICA.",
             why_title: "POR QUÉ HYPE",
             feature1_title: "Ahorra tiempo (¡y estrés!)",
             feature1_text: "Planificar un company retreat no tiene por qué ser una carga. Me ocupo de todo –de punta a punta: desde la logística hasta la agenda y la implementación. Todo está pensado para que el equipo solo tenga que llegar, relajarse y disfrutar.",
@@ -48,16 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
             organizer_subtitle: "¡Yo, Martina!",
             organizer_p1: "Hace 10 años que trabajo en IT, construyendo culturas, acompañando equipos y diseñando experiencias que hacen del trabajo algo más <strong>humano y disfrutable</strong>. Siempre me movió lo mismo: conectar con las personas y crear espacios donde se sientan escuchadas, acompañadas, valoradas y libres de ser ellas mismas.",
             organizer_p2: "Desde hace 5 años, lo hago con la computadora en la mochila mientras recorro el mundo.",
-            organizer_p3: "Hoy combino todo lo que aprendí en mi recorrido por People Experience con mi pasión por viajar, para darle vida a Hype. Lo hago con una mirada estratégica, que me permite entender qué necesita un equipo para funcionar mejor, y con la experiencia de haber liderado equipos y organizado viajes alrededor del mundo. Y también lo hago desde lo que soy, en esencia: sociable, enérgica, creativa, curiosa y aventurera.",
+            organizer_p3: "<strong>Hoy combino todo lo que aprendí en mi recorrido por People Experience con mi pasión por viajar, para darle vida a Hype.</strong> Lo hago con una mirada estratégica, que me permite entender qué necesita un equipo para funcionar mejor, y con la experiencia de haber liderado equipos y organizado viajes alrededor del mundo. Y también lo hago desde lo que soy, en esencia: sociable, enérgica, creativa, curiosa y aventurera.",
             contact_title: "¡Hablemos!",
-            contact_intro: "¿Querés planear un company retreat épico? Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos, así podés contarme qué tenés en mente, y yo te ayudo a hacerlo realidad.",
+            contact_intro: "<strong>¿Querés planear un company retreat épico?</strong> Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos, así podés contarme qué tenés en mente, y yo te ayudo a hacerlo realidad.",
             form_name: "Nombre completo",
-            form_email: "Dirección de email de la empresa",
+            form_email: "Email",
             form_company: "Nombre de la empresa",
             form_participants: "Cantidad estimada de participantes",
             form_budget: "Presupuesto estimado del viaje",
             form_dates: "Fechas tentativas del viaje",
-            form_message: "¿Querés sumar algo más? (opcional)",
+            form_message: "¿Querés sumar algo más?",
+            form_message_desc: "¡Cuantos más detalles, mejor! Si ya organizaste un retreat antes, podés contarme qué te gustó (o qué no). También podés mencionar tu destino ideal.",
             form_submit: "Enviar",
         },
         en: {
@@ -65,8 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
             nav_how_it_works: "HOW IT WORKS",
             nav_organizer: "WHO IS BEHIND",
             nav_contact: "LET'S TALK!",
-            hero_headline: "MEETINGS THAT TRANSFORM TEAMS.",
-            hero_subheadline: "PLANNING COMPANY RETREATS WITH PURPOSE, IMPACT, AND HUMAN CONNECTION, IN THE BEST DESTINATIONS IN LATIN AMERICA.",
+            hero_headline: "MEETINGS THAT<br>TRANSFORM TEAMS",
+            hero_subheadline: "PLANNING COMPANY RETREATS WITH <strong>PURPOSE, IMPACT AND HUMAN CONNECTION</strong>,<br>IN THE BEST DESTINATIONS IN LATIN AMERICA.",
             why_title: "WHY HYPE",
             feature1_title: "Save time (and stress!)",
             feature1_text: "Planning a company retreat doesn't have to be a burden. I take care of everything from end to end: from logistics to the agenda and implementation. Everything is designed so that the team just has to arrive, relax, and enjoy.",
@@ -91,16 +90,17 @@ document.addEventListener("DOMContentLoaded", function() {
             organizer_subtitle: "Me, Martina!",
             organizer_p1: "I have been working in IT for 10 years, building cultures, accompanying teams, and designing experiences that make work more <strong>human and enjoyable</strong>. I have always been moved by the same thing: connecting with people and creating spaces where they feel heard, accompanied, valued, and free to be themselves.",
             organizer_p2: "For the last 5 years, I've been doing it with my laptop in my backpack while traveling the world.",
-            organizer_p3: "Today I combine everything I learned in my journey through People Experience with my passion for traveling, to give life to Hype. I do it with a strategic vision, which allows me to understand what a team needs to function better, and with the experience of having led teams and organized trips around the world. And I also do it from what I am, in essence: sociable, energetic, creative, curious, and adventurous.",
+            organizer_p3: "<strong>Today I combine everything I learned in my journey through People Experience with my passion for traveling, to give life to Hype.</strong> I do it with a strategic vision, which allows me to understand what a team needs to function better, and with the experience of having led teams and organized trips around the world. And I also do it from what I am, in essence: sociable, energetic, creative, curious, and adventurous.",
             contact_title: "Let's talk!",
-            contact_intro: "Want to plan an epic company retreat? Complete the form and I will contact you to schedule a 15-minute call, so you can tell me what you have in mind, and I will help you make it happen.",
+            contact_intro: "<strong>Want to plan an epic company retreat?</strong> Complete the form and I will contact you to schedule a 15-minute call, so you can tell me what you have in mind, and I will help you make it happen.",
             form_name: "Full name",
-            form_email: "Company email address",
+            form_email: "Email",
             form_company: "Company name",
             form_participants: "Estimated number of participants",
             form_budget: "Estimated travel budget",
             form_dates: "Tentative travel dates",
-            form_message: "Anything else you want to add? (optional)",
+            form_message: "Anything else you want to add?",
+            form_message_desc: "The more details, the better! If you have organized a retreat before, you can tell me what you liked (or what you didn't). You can also mention your ideal destination.",
             form_submit: "Submit",
         }
     };
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.documentElement.lang = lang;
         document.querySelectorAll('[data-translate]').forEach(el => {
             const key = el.getAttribute('data-translate');
-            if (translations[lang] && translations[lang][key]) { // Check if lang and key exist
+            if (translations[lang] && translations[lang][key]) {
                 el.innerHTML = translations[lang][key];
             }
         });
@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function() {
     setLanguage(userLang);
 
     // --- Lógica para animaciones de scroll ---
-    // (Sin cambios en esta sección)
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     if (animatedElements.length > 0) {
         const animationObserver = new IntersectionObserver((entries) => {
@@ -146,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- LÓGICA CARRUSEL DE IMPACTO ---
-    // (Sin cambios en esta sección)
     const impactCarousel = document.getElementById('impact-carousel');
     const impactImages = [
         'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting1.jpg',
@@ -176,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // --- LÓGICA CARRUSEL GALERÍA ---
-    // (Sin cambios en esta sección)
     const galleryCarousel = document.querySelector('#portfolio .carousel-slide');
     const galleryImages = [
         'images/web/puente.jpg', 'images/web/manos.png', 'images/web/escalada.jpg', 'images/web/sombra.jpg',
@@ -186,50 +183,54 @@ document.addEventListener("DOMContentLoaded", function() {
     if (galleryCarousel) {
         const allGalleryImages = [...galleryImages, ...galleryImages];
         galleryCarousel.innerHTML = allGalleryImages.map(src => `<img src="${src}" alt="Portfolio image">`).join('');
+        
         const slide = galleryCarousel;
         const prevBtn = document.querySelector('#portfolio .prev-btn');
         const nextBtn = document.querySelector('#portfolio .next-btn');
         let currentIndex = 0;
         const numImages = galleryImages.length;
         const getImageWidth = () => slide.querySelector('img').clientWidth + 20;
-        let autoSlideInterval;
-        function goToSlide(index) {
-            slide.style.transition = 'transform 0.5s ease-in-out';
+
+        function goToSlide(index, transition = true) {
+            if (transition) {
+                slide.style.transition = 'transform 0.5s ease-in-out';
+            } else {
+                slide.style.transition = 'none';
+            }
             slide.style.transform = `translateX(${-index * getImageWidth()}px)`;
         }
+
         function nextSlide() {
             currentIndex++;
+            goToSlide(currentIndex);
+            
             if (currentIndex >= numImages) {
-                goToSlide(currentIndex);
                 setTimeout(() => {
-                    slide.style.transition = 'none';
                     currentIndex = 0;
-                    goToSlide(currentIndex);
+                    goToSlide(currentIndex, false);
                 }, 500);
-            } else {
-                goToSlide(currentIndex);
             }
         }
+
         function prevSlide() {
             if (currentIndex <= 0) {
-                slide.style.transition = 'none';
                 currentIndex = numImages;
-                goToSlide(currentIndex);
+                goToSlide(currentIndex, false);
             }
             setTimeout(() => {
                 currentIndex--;
                 goToSlide(currentIndex);
             }, 10);
         }
-        function startAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(nextSlide, 3000);
-        }
-        nextBtn.addEventListener('click', () => { clearInterval(autoSlideInterval); nextSlide(); startAutoSlide(); });
-        prevBtn.addEventListener('click', () => { clearInterval(autoSlideInterval); prevSlide(); startAutoSlide(); });
-        galleryCarousel.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-        galleryCarousel.parentElement.addEventListener('mouseleave', () => startAutoSlide());
-        startAutoSlide();
+
+        nextBtn.addEventListener('click', () => {
+            slide.style.animation = 'none';
+            nextSlide();
+        });
+        prevBtn.addEventListener('click', () => {
+            slide.style.animation = 'none';
+            prevSlide();
+        });
     }
 
     // --- LÓGICA DE NAVEGACIÓN ACTIVA ---
@@ -240,7 +241,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateActiveLink() {
         let currentSectionId = '';
         sections.forEach(section => {
-            // Se ajusta el offset por la altura del header + un margen
             const sectionTop = section.offsetTop - headerHeight - 50; 
             if (window.scrollY >= sectionTop) {
                 currentSectionId = section.getAttribute('id');
@@ -258,4 +258,43 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     window.addEventListener('scroll', updateActiveLink);
     window.addEventListener('load', updateActiveLink);
+
+    // --- LÓGICA DE ENVÍO DEL FORMULARIO ---
+    const form = document.getElementById('contact-form');
+    const contactContent = document.getElementById('contact-content');
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Si el envío fue exitoso, muestra el mensaje de gracias
+                contactContent.innerHTML = `
+                    <div class="thank-you-message">
+                        <h2>¡Gracias!</h2>
+                        <p>En breve, me pongo en contacto con vos :)</p>
+                    </div>
+                `;
+            } else {
+                // Si hubo un error, puedes manejarlo aquí
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Oops! Hubo un problema al enviar tu formulario.');
+                    }
+                })
+            }
+        }).catch(error => {
+            alert('Oops! Hubo un problema al enviar tu formulario.');
+        });
+    }
+    form.addEventListener("submit", handleSubmit);
+
 });

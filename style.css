@@ -21,8 +21,6 @@
     font-weight: 600;
     font-style: normal;
 }
-
-/* --- NUEVAS FUENTES --- */
 @font-face {
     font-family: 'Raleway';
     src: url('fonts/ralewaylight.ttf') format('truetype');
@@ -55,14 +53,14 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'DM Sans', sans-serif; /* Cambio 9: Fuente por defecto para párrafos */
+    font-family: 'DM Sans', sans-serif;
     background-color: #ebebeb;
     color: #000000;
     overflow-x: hidden;
 }
 .container {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -72,7 +70,6 @@ strong { font-weight: 600; }
 
 /* --- BARRA DE NAVEGACIÓN --- */
 .main-header {
-    /* Cambio 2: Header posicionado sobre el hero */
     position: absolute;
     top: 0;
     left: 0;
@@ -82,7 +79,6 @@ strong { font-weight: 600; }
     background-color: transparent;
     transition: background-color 0.4s ease, border-bottom 0.4s ease;
 }
-/* Clase que se añade con JS al hacer scroll */
 .main-header.scrolled {
     position: fixed;
     background-color: #ebebeb;
@@ -97,54 +93,68 @@ strong { font-weight: 600; }
     margin: 0 auto;
     padding: 0 40px;
 }
-
-/* Cambio 1: Estilo y tamaño del logo */
 .logo-nav a {
     font-family: 'Le Petit Cochon', sans-serif;
-    font-size: 2.5rem; /* Tamaño ajustado */
-    color: #FFFFFF; /* Color inicial blanco */
+    font-size: 3rem;
+    color: #FFFFFF;
     text-decoration: none;
     letter-spacing: 4px;
     transition: color 0.4s ease;
 }
 .main-header.scrolled .logo-nav a {
-    color: #000000; /* Color del logo al hacer scroll */
+    color: #000000;
 }
-
+.nav-right-group {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 35px; /* Espacio entre links */
+    gap: 35px;
 }
 .nav-links a {
-    /* Cambio 3: Estilo de los links de navegación */
     font-family: 'Raleway', sans-serif;
-    font-weight: 300; /* Light */
+    font-weight: 300;
     text-decoration: none;
-    color: #FFFFFF; /* Color blanco */
+    color: #FFFFFF;
     font-size: 0.9rem;
-    letter-spacing: -0.05em; /* Equivalente a -50 en software de diseño */
+    letter-spacing: -0.03em;
     text-transform: uppercase;
-    transition: color 0.3s ease, font-weight 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    padding: 10px 0;
 }
-/* Cambio de color de links al hacer scroll */
 .main-header.scrolled .nav-links a,
 .main-header.scrolled .lang-button {
     color: #000000;
 }
-
 .nav-links a:hover,
 .nav-links a.active-link {
-  font-weight: 500; /* Un poco más de grosor al estar activo o en hover */
+  font-weight: 500;
 }
-
+.nav-cta a {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+.main-header.scrolled .nav-cta a {
+    background-color: #000;
+    color: #fff;
+}
+.nav-cta a:hover {
+    background-color: #ddd;
+}
+.main-header.scrolled .nav-cta a:hover {
+    background-color: #333;
+}
 .lang-dropdown {
     position: relative;
-    margin-left: 20px;
 }
 .lang-button {
-    /* Cambio 3: Estilo del botón de idioma */
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     color: #FFFFFF;
@@ -158,7 +168,6 @@ strong { font-weight: 600; }
 .main-header.scrolled .lang-button {
     border-color: #000;
 }
-
 .lang-options { display: none; position: absolute; background-color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.1); z-index: 1; border-radius: 5px; margin-top: 5px; right: 0; }
 .lang-options.show { display: block; }
 .lang-option { color: black; padding: 10px 15px; text-decoration: none; display: block; font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 0.9rem; }
@@ -172,25 +181,22 @@ main > .container > section, .footer-section .container, .carousel-section {
     border-bottom: 1px solid #dcdcdc;
 }
 .carousel-section {
-     padding-top: 80px; 
-     padding-bottom: 80px; 
+     padding-top: 80px;
+     padding-bottom: 80px;
 }
 .footer-section { border-bottom: none; }
-
-/* Cambio 6: Estilo para títulos de sección */
 h2.section-title {
     font-family: 'Raleway', sans-serif;
-    font-weight: 600; /* Semibold */
+    font-weight: 600;
     font-size: 2rem;
     text-transform: uppercase;
     color: #000;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     text-align: center;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
 }
-/* Cambio 9: Estilo para cuerpos de texto (se mantiene DM Sans) */
 p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 1em;
     letter-spacing: -0.5px;
     line-height: 1.45;
@@ -199,7 +205,7 @@ p:last-child { margin-bottom: 0; }
 
 /* --- SECCIÓN HERO --- */
 .hero-section {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -220,34 +226,46 @@ p:last-child { margin-bottom: 0; }
 .impact-carousel.brindis-pos { background-position: center 20%; }
 .impact-carousel.cena-pos { background-position: center 80%; }
 .hero-overlay {
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text {
     padding: 20px;
     max-width: 1000px;
 }
-/* Cambio 4: Estilo del Headline */
 .hero-overlay h1 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700; /* Bold */
-    font-size: 4.5vw; /* Tamaño más chico y responsivo */
+    font-weight: 700;
+    font-size: 3.8vw;
     color: #FFFFFF;
     line-height: 1.1;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
-/* Cambio 5: Estilo del Subheadline */
 .hero-overlay p {
     font-family: 'Raleway', sans-serif;
-    font-weight: 300; /* Light */
-    font-size: 1.2rem; /* Tamaño más grande */
+    font-weight: 300;
+    font-size: 1.3rem;
     color: #FFFFFF;
     line-height: 1.4;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
+.hero-overlay p strong {
+    font-weight: 600; /* Raleway Semibold */
+}
+
 
 @keyframes zoomAndFade {
     0% { transform: scale(1); opacity: 0; }
@@ -258,21 +276,19 @@ p:last-child { margin-bottom: 0; }
 
 
 /* --- SECCIÓN POR QUÉ HYPE --- */
-/* Cambio 8: Grid de 3 columnas */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 .feature-item { text-align: left; }
-/* Cambio 7: Estilo de subtítulos (aplica a todos los h3 de features y steps) */
 .feature-item h3, .work-step h3 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 500; /* Medium */
+    font-weight: 500;
     font-size: 1.1rem;
     text-transform: uppercase;
     color: #000000;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -284,11 +300,21 @@ p:last-child { margin-bottom: 0; }
     align-items: flex-start;
     gap: 60px;
 }
-.text-column { flex: 1.5; text-align: left; }
-.image-column { flex: 1; }
-.content-row .section-title { text-align: left; margin-top: 0; }
+.text-column {
+    flex: 1.5;
+    text-align: left;
+    padding-right: 4rem;
+}
+.image-column {
+    flex: 1;
+}
+.content-row .section-title {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px; /* Ajuste final: Un poco más de espacio aquí */
+}
 .section-subtitle {
-    font-family: 'DM Sans', sans-serif; /* Mantenemos DM Sans como en el original */
+    font-family: 'DM Sans', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
     color: #000;
@@ -303,7 +329,17 @@ p:last-child { margin-bottom: 0; }
 
 /* --- CARRUSEL GALERÍA --- */
 .carousel-container { max-width: 100%; margin: auto; overflow: hidden; position: relative; }
-.carousel-slide { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-slide { display: flex; }
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.carousel-slide {
+    animation: scroll 30s linear infinite;
+}
+.carousel-container:hover .carousel-slide {
+    animation-play-state: paused;
+}
 .carousel-slide img { width: 450px; height: 500px; object-fit: cover; padding: 0 10px; flex-shrink: 0; }
 .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.7); border: none; cursor: pointer; padding: 10px; width: 45px; height: 45px; border-radius: 50%; font-size: 24px; z-index: 10; }
 .prev-btn { left: 15px; }
@@ -322,14 +358,26 @@ p:last-child { margin-bottom: 0; }
 
 /* --- FOOTER (HABLEMOS) --- */
 .footer-section { text-align: center; }
+.footer-section .section-title {
+    margin-bottom: 40px;
+}
 .contact-intro { max-width: 800px; margin: 0 auto 60px auto; }
-
-/* Cambio 11: Estilos del nuevo formulario */
 .contact-form {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
 }
+/* Estilo para el mensaje de agradecimiento */
+.thank-you-message h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.thank-you-message p {
+    font-size: 1.2rem;
+}
+
 .form-row {
     display: flex;
     gap: 40px;
@@ -346,8 +394,15 @@ p:last-child { margin-bottom: 0; }
     font-family: 'DM Sans', sans-serif;
     font-size: 0.9rem;
     color: #555;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     display: block;
+}
+.form-description {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 300;
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 .contact-form input, .contact-form textarea {
     width: 100%;
@@ -356,7 +411,7 @@ p:last-child { margin-bottom: 0; }
     background-color: transparent;
     padding: 10px 0;
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 .contact-form input:focus, .contact-form textarea:focus {
@@ -401,15 +456,17 @@ p:last-child { margin-bottom: 0; }
     .container, .main-nav { padding: 0 30px; }
     h2.section-title { font-size: 1.8rem; }
     .hero-overlay h1 { font-size: 8vw; }
-    .features-grid, .work-steps-container { grid-template-columns: 1fr 1fr; } /* 2 columnas en tablet */
+    .features-grid, .work-steps-container { grid-template-columns: 1fr 1fr; }
     .content-row { flex-direction: column; }
+    .text-column { padding-right: 0; }
     .form-row { flex-direction: column; gap: 25px; margin-bottom: 0; }
     .form-group { margin-bottom: 25px; }
+    .nav-right-group { display: none; }
 }
 @media (max-width: 768px) {
-    .main-nav { flex-direction: column; gap: 15px; }
+    .main-nav { flex-direction: row; justify-content: space-between; }
     .hero-overlay h1 { font-size: 12vw; }
     .hero-overlay p { font-size: 1rem; }
-    .features-grid, .work-steps-container { grid-template-columns: 1fr; gap: 40px; } /* 1 columna en móvil */
+    .features-grid, .work-steps-container { grid-template-columns: 1fr; }
     .carousel-slide img { width: 320px; height: 400px; }
 }
