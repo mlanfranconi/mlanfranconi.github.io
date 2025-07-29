@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
             organizer_p2: "Desde hace 5 años, lo hago con la computadora en la mochila mientras recorro el mundo.",
             organizer_p3: "<strong>Hoy combino todo lo que aprendí en mi recorrido por People Experience con mi pasión por viajar, para darle vida a Hype.</strong> Lo hago con una mirada estratégica, que me permite entender qué necesita un equipo para funcionar mejor, y con la experiencia de haber liderado equipos y organizado viajes alrededor del mundo. Y también lo hago desde lo que soy, en esencia: sociable, enérgica, creativa, curiosa y aventurera.",
             contact_title: "¡Hablemos!",
-            contact_intro: "<strong>¿Querés planear un company retreat épico?</strong> Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos, así podés contarme qué tenés en mente, y yo te ayudo a hacerlo realidad.",
+            contact_intro: "<strong>¿Querés planear un company retreat épico?</strong> Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos. Así podés contarme qué tenés en mente, y te ayudo a hacerlo realidad.",
             form_name: "Nombre completo",
             form_email: "Email",
             form_company: "Nombre de la empresa",
