@@ -60,13 +60,13 @@ document.addEventListener("DOMContentLoaded", function() {
             form_submit: "Enviar",
         },
         en: {
-            nav_why: "WHY HYPE",
+            nav_why: "WHY CHOOSING HYPE",
             nav_how_it_works: "HOW IT WORKS",
             nav_organizer: "WHO IS BEHIND",
             nav_contact: "LET'S TALK!",
             hero_headline: "GATHERINGS THAT<br>TRANSFORM TEAMS",
             hero_subheadline: "PLANNING COMPANY RETREATS WITH <strong>PURPOSE, IMPACT AND HUMAN CONNECTION</strong>,<br>IN THE BEST DESTINATIONS IN LATIN AMERICA.",
-            why_title: "WHY HYPE",
+            why_title: "WHY CHOOSING HYPE",
             feature1_title: "Save time (and stress!)",
             feature1_text: "Planning a company retreat doesn't have to be a burden. I take care of everything from end to end: from logistics to the agenda and implementation. Everything is designed so that the team just has to arrive, relax, and enjoy.",
             feature2_title: "Proven experience",
@@ -145,31 +145,55 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- LÓGICA CARRUSEL DE IMPACTO ---
-    const impactCarousel = document.getElementById('impact-carousel');
+    // CAMBIO A PRUEBA DE BALAS: Lógica para zoom que se reinicia con crossfade sin saltos
+    const carouselA = document.getElementById('impact-carousel-a');
+    const carouselB = document.getElementById('impact-carousel-b');
     const impactImages = [
         'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting1.jpg',
         'images/header/brindis.jpg', 'images/header/charla.jpg', 'images/header/cena.jpg'
     ];
     let currentImpactIndex = 0;
+    let activeLayer = carouselA;
+
     function showNextImpactImage() {
-        const nextImage = new Image();
-        nextImage.src = impactImages[(currentImpactIndex + 1) % impactImages.length];
-        const currentImageSrc = impactImages[currentImpactIndex];
-        impactCarousel.style.backgroundImage = `url('${currentImageSrc}')`;
-        impactCarousel.classList.remove('brindis-pos', 'cena-pos');
-        if (currentImageSrc.includes('brindis.jpg')) {
-            impactCarousel.classList.add('brindis-pos');
-        } else if (currentImageSrc.includes('cena.jpg')) {
-            impactCarousel.classList.add('cena-pos');
-        }
-        impactCarousel.style.animation = 'none';
-        void impactCarousel.offsetWidth;
-        impactCarousel.style.animation = `zoomAndFade 4s ease-in-out forwards`;
+        const inactiveLayer = (activeLayer === carouselA) ? carouselB : carouselA;
+        const oldLayer = activeLayer;
+        
         currentImpactIndex = (currentImpactIndex + 1) % impactImages.length;
+        const nextImageSrc = impactImages[currentImpactIndex];
+        
+        inactiveLayer.style.backgroundImage = `url('${nextImageSrc}')`;
+        
+        inactiveLayer.classList.remove('brindis-pos', 'cena-pos');
+        if (nextImageSrc.includes('brindis.jpg')) {
+            inactiveLayer.classList.add('brindis-pos');
+        } else if (nextImageSrc.includes('cena.jpg')) {
+            inactiveLayer.classList.add('cena-pos');
+        }
+
+        // 1. Reiniciar la animación en la capa que va a entrar
+        inactiveLayer.classList.remove('animate');
+        void inactiveLayer.offsetWidth;
+        
+        // 2. Activar la transición
+        inactiveLayer.classList.add('visible', 'animate');
+        oldLayer.classList.remove('visible');
+        
+        // 3. Limpiar la animación de la capa vieja DESPUÉS de que se haya desvanecido
+        setTimeout(() => {
+            oldLayer.classList.remove('animate');
+        }, 1500); // Coincide con la duración de la transición de opacidad en CSS
+        
+        activeLayer = inactiveLayer;
     }
-    if (impactCarousel) {
-        setInterval(showNextImpactImage, 4000);
-        showNextImpactImage();
+
+    if (carouselA && carouselB) {
+        // Configuración inicial
+        carouselA.style.backgroundImage = `url('${impactImages[0]}')`;
+        carouselA.classList.add('visible');
+        carouselA.classList.add('animate');
+        
+        setInterval(showNextImpactImage, 6000); // Coincide con la duración de la animación en CSS
     }
 
 
@@ -295,6 +319,8 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Oops! Hubo un problema al enviar tu formulario.');
         });
     }
-    form.addEventListener("submit", handleSubmit);
+    if (form) { // Comprobar que el formulario existe antes de añadir el listener
+        form.addEventListener("submit", handleSubmit);
+    }
 
 });
