@@ -24,31 +24,32 @@ document.addEventListener("DOMContentLoaded", function() {
             hero_subheadline: "PLANIFICACIÓN DE COMPANY RETREATS CON <strong>PROPÓSITO, IMPACTO Y CONEXIÓN HUMANA</strong>,<br>EN LOS MEJORES DESTINOS DE LATINOAMÉRICA.",
             why_title: "POR QUÉ HYPE",
             feature1_title: "Ahorra tiempo (¡y estrés!)",
-            feature1_text: "Planificar un company retreat no tiene por qué ser una carga. Me ocupo de todo –de punta a punta: desde la logística hasta la agenda y la implementación. Todo está pensado para que el equipo solo tenga que llegar, relajarse y disfrutar.",
-            feature2_title: "Experiencia comprobada",
-            feature2_text: "Con encuentros organizados para 10 a 60 personas, de líderes y de equipos completos, en distintos formatos y destinos, aprendí qué funciona (y qué no), y cómo hacer que todo fluya.",
+            feature1_text: "Planificar un company retreat no tiene por qué ser una carga adicional para tu equipo. Me ocupo de todo, de punta a punta, para <em>no frenar el trabajo de quienes están haciendo crecer tu empresa.</em> Todo está pensado para que solo tengan que llegar, relajarse y disfrutar.",
+            feature2_title: "Está probado",
+            feature2_text: "Después de organizar varios encuentros —para 10 y para 60 personas, para líderes y para equipos completos, en distintos formatos y destinos— <em>sé qué funciona y cómo hacer que todo fluya.</em> Cada experiencia me ayudó a perfeccionar el proceso y mejorar los resultados.",
             feature3_title: "100% personalizado",
-            feature3_text: "Cada encuentro se arma a medida, según el momento de la organización, su cultura y sus desafíos. Con un enfoque estratégico y creativo, diseño una agenda que combina espacios de trabajo, con momentos de conexión y disfrute, sin fórmulas prefabricadas.",
+            feature3_text: "Armo cada encuentro a medida, <em>según el momento de la organización, su cultura y sus desafíos.</em> Con un enfoque estratégico y creativo, diseño una agenda que combina espacios de trabajo con momentos de conexión y disfrute, adaptada a las necesidades y deseos de cada cliente.",
             feature4_title: "Rentable",
-            feature4_text: "Negocio cada parte del presupuesto para ofrecer el mayor valor por el menor costo. Todo está claro, detallado y sin sorpresas.",
-            feature5_title: "Destinos que inspiran",
-            feature5_text: "Cada lugar se elige con mucho cuidado y criterio: entornos rodeados de naturaleza, buena conectividad, alojamiento de calidad, espacios funcionales y experiencias únicas.",
+            feature4_text: "Negocio cada parte del presupuesto para ofrecer el <em>mayor valor al menor costo, sin resignar calidad.</em> Trabajo con los mejores proveedores en cada lugar para crear experiencias únicas, accediendo a tarifas y condiciones preferenciales. Todo está detallado, claro y sin sorpresas: <em>comparto facturas, contratos y recibos,</em> porque creo en la transparencia como parte del servicio. ¡Tu CFO va a estar feliz!",
+            feature5_title: "Lugares que inspiran",
+            feature5_text: "Elijo cada destino con criterio y cuidado, priorizando <em>alojamientos de calidad, buena conectividad, entornos naturales y actividades al aire libre.</em> Busco que cada lugar ofrezca algo verdaderamente especial.",
             feature6_title: "Acompañamiento real",
-            feature6_text: "Antes, durante y después. Estoy ahí, paso a paso, cuidando cada detalle para que todo salga perfecto.",
+            feature6_text: "Estoy ahí, paso a paso, desde la logística hasta la ejecución. Antes, durante y después, ofreciendo soporte y cuidando cada detalle para que todo salga perfecto.",
             how_it_works_title: "¿Cómo funciona?",
             step1_heading: "1. CONSULTORÍA ESTRATÉGICA",
-            step1_p: "Nos sentamos a entender qué necesita tu equipo hoy. Hago un diagnóstico de la cultura y los desafíos actuales, y a partir de ahí definimos juntos los objetivos del encuentro y el concepto que nos va a guiar todo el camino.",
+            step1_p: "Completás un formulario y agendamos una llamada para entender qué necesita tu equipo hoy. Hago un diagnóstico de la cultura organizacional, basado en el feedback del equipo y de los líderes, para identificar los desafíos actuales. Con esta información, definimos juntos los objetivos del encuentro que van a guiar todo el proceso.",
             step2_heading: "2. DISEÑO DE LA EXPERIENCIA",
-            step2_p: "Me encargo de todo, de punta a punta. Encuentro el destino ideal, diseño la agenda y propongo actividades alineadas con los objetivos. Coordino la logística y los proveedores, para que no tengas que preocuparte por nada.",
+            step2_p: "Según tus objetivos, presupuesto y preferencias, armo una propuesta a medida. Elegimos juntos el destino, el lugar y las fechas, y desde ahí me ocupo de toda la logística: comidas, traslados, merchandising, agenda y actividades. No tenés que preocuparte por nada.",
             step3_heading: "3. IMPLEMENTACIÓN PRESENCIAL",
-            step3_p: "Acompaño al equipo durante el encuentro. Llevo los tiempos, facilito las dinámicas y cuido cada detalle para que la experiencia fluya de principio a fin. Soy una más, dedicada a que todo salga increíble.",
+            step3_p: "Acompaño al equipo durante todo el encuentro, dando soporte, manejando los tiempos de la agenda, facilitando las dinámicas y cuidando cada detalle para que la experiencia fluya de principio a fin. Soy una más, dedicada a que todo salga increíble.",
             organizer_title: "¿Quién está detrás?",
-            organizer_subtitle: "¡Yo, Martina!",
-            organizer_p1: "Hace 10 años que trabajo en IT, construyendo culturas, acompañando equipos y diseñando experiencias que hacen del trabajo algo más <strong>humano y disfrutable</strong>. Siempre me movió lo mismo: conectar con las personas y crear espacios donde se sientan escuchadas, acompañadas, valoradas y libres de ser ellas mismas.",
-            organizer_p2: "Desde hace 5 años, lo hago con la computadora en la mochila mientras recorro el mundo.",
+            organizer_subtitle: "<strong>¡Yo, Martina!</strong>",
+            organizer_p1: "Hace 10 años que trabajo en IT, construyendo culturas, acompañando equipos y diseñando experiencias que hacen del trabajo algo más humano y disfrutable. <strong>Siempre me movió lo mismo: conectar con las personas</strong> y crear espacios donde se sientan escuchadas, acompañadas, valoradas y libres de ser ellas mismas.",
+            organizer_p2: "Desde hace 5 años, lo hago con la computadora en la mochila mientras recorro el mundo. Ya visité 40 países, sumando experiencias que nutren tanto mi vida como mi trabajo.",
             organizer_p3: "<strong>Hoy combino todo lo que aprendí en mi recorrido por People Experience con mi pasión por viajar, para darle vida a Hype.</strong> Lo hago con una mirada estratégica, que me permite entender qué necesita un equipo para funcionar mejor, y con la experiencia de haber liderado equipos y organizado viajes alrededor del mundo. Y también lo hago desde lo que soy, en esencia: sociable, enérgica, creativa, curiosa y aventurera.",
             contact_title: "¡Hablemos!",
-            contact_intro: "<strong>¿Querés planear un company retreat épico?</strong> Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos. Así podés contarme qué tenés en mente, y te ayudo a hacerlo realidad.",
+            contact_intro: "<strong>¿Querés planear un company retreat épico?</strong> Completá el formulario y me pongo en contacto con vos para agendar una llamada de 15 minutos, así podés contarme qué tenés en mente, y yo te ayudo a hacerlo realidad.",
+            contact_email_info: "Y si no también me podés escribir a <em>hyperetreats@gmail.com</em>.",
             form_name: "Nombre completo",
             form_email: "Email",
             form_company: "Nombre de la empresa",
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             form_message_desc: "¡Cuantos más detalles, mejor! Si ya organizaste un retreat antes, podés contarme qué te gustó (o qué no). También podés mencionar tu destino ideal.",
             form_submit: "Enviar",
         },
-        en: {
+        en: { 
             nav_why: "WHY CHOOSING HYPE",
             nav_how_it_works: "HOW IT WORKS",
             nav_organizer: "WHO IS BEHIND",
@@ -68,31 +69,32 @@ document.addEventListener("DOMContentLoaded", function() {
             hero_subheadline: "PLANNING COMPANY RETREATS WITH <strong>PURPOSE, IMPACT AND HUMAN CONNECTION</strong>,<br>IN THE BEST DESTINATIONS IN LATIN AMERICA.",
             why_title: "WHY CHOOSING HYPE",
             feature1_title: "Save time (and stress!)",
-            feature1_text: "Planning a company retreat doesn't have to be a burden. I take care of everything from end to end: from logistics to the agenda and implementation. Everything is designed so that the team just has to arrive, relax, and enjoy.",
-            feature2_title: "Proven experience",
-            feature2_text: "With retreats organized for 10 to 60 people, for leaders and entire teams, in different formats and destinations, I have learned what works (and what doesn't), and how to make everything flow.",
+            feature1_text: "Planning a company retreat doesn't have to be an extra burden for your team. I handle everything, from start to finish, so as <em>not to stop the work of those who are growing your company.</em> Everything is designed so they just have to show up, relax, and enjoy.",
+            feature2_title: "It's proven",
+            feature2_text: "After organizing several retreats—for 10 and 60 people, for leaders and entire teams, in different formats and destinations—<em>I know what works and how to make everything flow.</em> Each experience has helped me refine the process and improve the results.",
             feature3_title: "100% personalized",
-            feature3_text: "Each retreat is custom-made, according to the organization's moment, its culture, and its challenges. With a strategic and creative approach, I design an agenda that combines work spaces with moments of connection and enjoyment, without prefabricated formulas.",
+            feature3_text: "I design each retreat tailored to <em>the organization's current moment, its culture, and its challenges.</em> With a strategic and creative approach, I create an agenda that combines work spaces with moments of connection and enjoyment, adapted to the needs and desires of each client.",
             feature4_title: "Cost-effective",
-            feature4_text: "I negotiate every part of the budget to offer the greatest value for the lowest cost. Everything is clear, detailed, and without surprises.",
-            feature5_title: "Inspiring destinations",
-            feature5_text: "Each place is chosen with great care and criteria: environments surrounded by nature, good connectivity, quality accommodation, functional spaces, and unique experiences.",
+            feature4_text: "I negotiate every part of the budget to offer the <em>greatest value at the lowest cost, without sacrificing quality.</em> I work with the best suppliers in each location to create unique experiences, accessing preferential rates and conditions. Everything is detailed, clear, and without surprises: <em>I share invoices, contracts, and receipts,</em> because I believe in transparency as part of the service. Your CFO will be happy!",
+            feature5_title: "Inspiring places",
+            feature5_text: "I choose each destination with care and criteria, prioritizing <em>quality accommodations, good connectivity, natural environments, and outdoor activities.</em> I look for each place to offer something truly special.",
             feature6_title: "Real support",
-            feature6_text: "Before, during, and after. I am there, step by step, taking care of every detail to ensure everything turns out perfectly.",
+            feature6_text: "I'm there, step by step, from logistics to execution. Before, during, and after, offering support and taking care of every detail to ensure everything goes perfectly.",
             how_it_works_title: "How does it work?",
             step1_heading: "1. STRATEGIC CONSULTING",
-            step1_p: "We sit down to understand what your team needs today. I make a diagnosis of the current culture and challenges, and from there we define together the objectives of the retreat and the concept that will guide us all the way.",
+            step1_p: "You fill out a form and we schedule a call to understand what your team needs today. I conduct an organizational culture diagnosis, based on feedback from the team and leaders, to identify current challenges. With this information, we jointly define the retreat's objectives that will guide the entire process.",
             step2_heading: "2. EXPERIENCE DESIGN",
-            step2_p: "I take care of everything, from end to end. I find the ideal destination, design the agenda, and propose activities aligned with the objectives. I coordinate logistics and suppliers, so you don't have to worry about anything.",
+            step2_p: "Based on your objectives, budget, and preferences, I create a customized proposal. We choose the destination, venue, and dates together, and from there I handle all the logistics: meals, transfers, merchandise, agenda, and activities. You don't have to worry about anything.",
             step3_heading: "3. ON-SITE IMPLEMENTATION",
-            step3_p: "I accompany the team during the retreat. I manage the schedule, facilitate the dynamics, and take care of every detail so that the experience flows from beginning to end. I am one more person, dedicated to making everything incredible.",
+            step3_p: "I accompany the team throughout the retreat, providing support, managing the schedule, facilitating activities, and taking care of every detail to ensure the experience flows smoothly from start to finish. I am one more member of the team, dedicated to making everything incredible.",
             organizer_title: "Who is behind?",
-            organizer_subtitle: "Me, Martina!",
-            organizer_p1: "I have been working in IT for 10 years, building cultures, accompanying teams, and designing experiences that make work more <strong>human and enjoyable</strong>. I have always been moved by the same thing: connecting with people and creating spaces where they feel heard, accompanied, valued, and free to be themselves.",
-            organizer_p2: "For the last 5 years, I've been doing it with my laptop in my backpack while traveling the world.",
-            organizer_p3: "<strong>Today I combine everything I learned in my journey through People Experience with my passion for traveling, to give life to Hype.</strong> I do it with a strategic vision, which allows me to understand what a team needs to function better, and with the experience of having led teams and organized trips around the world. And I also do it from what I am, in essence: sociable, energetic, creative, curious, and adventurous.",
+            organizer_subtitle: "<strong>Me, Martina!</strong>",
+            organizer_p1: "I have been working in IT for 10 years, building cultures, supporting teams, and designing experiences that make work more human and enjoyable. <strong>I've always been driven by the same thing: connecting with people</strong> and creating spaces where they feel heard, supported, valued, and free to be themselves.",
+            organizer_p2: "For the last 5 years, I've been doing it with my laptop in my backpack while traveling the world. I've visited 40 countries, gathering experiences that enrich both my life and my work.",
+            organizer_p3: "<strong>Today, I combine everything I've learned in my People Experience journey with my passion for travel to bring Hype to life.</strong> I do it with a strategic perspective that allows me to understand what a team needs to function better, and with the experience of having led teams and organized trips around the world. And I also do it from who I am, in essence: sociable, energetic, creative, curious, and adventurous.",
             contact_title: "Let's talk!",
             contact_intro: "<strong>Want to plan an epic company retreat?</strong> Complete the form and I will contact you to schedule a 15-minute call, so you can tell me what you have in mind, and I will help you make it happen.",
+            contact_email_info: "Alternatively, you can also write to me at <em>hyperetreats@gmail.com</em>.",
             form_name: "Full name",
             form_email: "Email",
             form_company: "Company name",
@@ -145,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- LÓGICA CARRUSEL DE IMPACTO ---
-    // CAMBIO A PRUEBA DE BALAS: Lógica para zoom que se reinicia con crossfade sin saltos
     const carouselA = document.getElementById('impact-carousel-a');
     const carouselB = document.getElementById('impact-carousel-b');
     const impactImages = [
@@ -171,29 +172,25 @@ document.addEventListener("DOMContentLoaded", function() {
             inactiveLayer.classList.add('cena-pos');
         }
 
-        // 1. Reiniciar la animación en la capa que va a entrar
         inactiveLayer.classList.remove('animate');
         void inactiveLayer.offsetWidth;
         
-        // 2. Activar la transición
         inactiveLayer.classList.add('visible', 'animate');
         oldLayer.classList.remove('visible');
         
-        // 3. Limpiar la animación de la capa vieja DESPUÉS de que se haya desvanecido
         setTimeout(() => {
             oldLayer.classList.remove('animate');
-        }, 1500); // Coincide con la duración de la transición de opacidad en CSS
+        }, 1500);
         
         activeLayer = inactiveLayer;
     }
 
     if (carouselA && carouselB) {
-        // Configuración inicial
         carouselA.style.backgroundImage = `url('${impactImages[0]}')`;
         carouselA.classList.add('visible');
         carouselA.classList.add('animate');
         
-        setInterval(showNextImpactImage, 6000); // Coincide con la duración de la animación en CSS
+        setInterval(showNextImpactImage, 6000);
     }
 
 
@@ -298,7 +295,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }).then(response => {
             if (response.ok) {
-                // Si el envío fue exitoso, muestra el mensaje de gracias
                 contactContent.innerHTML = `
                     <div class="thank-you-message">
                         <h2>¡Gracias!</h2>
@@ -306,7 +302,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 `;
             } else {
-                // Si hubo un error, puedes manejarlo aquí
                 response.json().then(data => {
                     if (Object.hasOwn(data, 'errors')) {
                         alert(data["errors"].map(error => error["message"]).join(", "));
@@ -319,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Oops! Hubo un problema al enviar tu formulario.');
         });
     }
-    if (form) { // Comprobar que el formulario existe antes de añadir el listener
+    if (form) {
         form.addEventListener("submit", handleSubmit);
     }
 

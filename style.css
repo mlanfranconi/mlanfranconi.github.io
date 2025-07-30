@@ -17,6 +17,12 @@
 }
 @font-face {
     font-family: 'DM Sans';
+    src: url('fonts/DM sans medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DM Sans';
     src: url('fonts/DM sans semi bold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
@@ -64,8 +70,13 @@ body {
     margin: 0 auto;
     padding: 0 40px;
 }
-em { font-style: italic; }
-strong { font-weight: 600; }
+em {
+    font-style: normal;
+    font-weight: 500;
+}
+strong {
+    font-weight: 600;
+}
 
 
 /* --- BARRA DE NAVEGACIÓN --- */
@@ -98,7 +109,7 @@ strong { font-weight: 600; }
     font-size: 3rem;
     color: #FFFFFF;
     text-decoration: none;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     transition: color 0.4s ease;
 }
 .main-header.scrolled .logo-nav a {
@@ -196,7 +207,7 @@ h2.section-title {
     letter-spacing: -0.03em;
 }
 p {
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 1em;
     letter-spacing: -0.5px;
     line-height: 1.45;
@@ -215,8 +226,6 @@ p:last-child { margin-bottom: 0; }
     overflow: hidden;
     background-color: #000;
 }
-
-/* CAMBIO A PRUEBA DE BALAS: Animación de zoom continuo */
 @keyframes kenBurnsEffect {
     from {
         transform: scale(1);
@@ -225,7 +234,6 @@ p:last-child { margin-bottom: 0; }
         transform: scale(1.1);
     }
 }
-
 .impact-carousel {
     position: absolute;
     top: 0;
@@ -235,23 +243,20 @@ p:last-child { margin-bottom: 0; }
     background-size: cover;
     background-position: center;
     opacity: 0;
-    /* La animación de zoom está SIEMPRE activa, yendo y viniendo */
-    animation: kenBurnsEffect 7s ease-in-out infinite alternate;
-    /* El fundido solo afecta la opacidad */
     transition: opacity 1.5s ease-in-out;
 }
-
 .impact-carousel.visible {
     opacity: 1;
-    z-index: 2; /* Pone la capa visible por encima */
 }
-
+.impact-carousel.animate {
+    animation: kenBurnsEffect 6s linear forwards;
+}
 .impact-carousel.brindis-pos { background-position: center 20%; }
 .impact-carousel.cena-pos { background-position: center 80%; }
 .hero-overlay {
     background-color: rgba(0, 0, 0, 0.4);
     position: relative;
-    z-index: 3; /* Asegura que el texto esté por encima de todo */
+    z-index: 2;
     width: 100%;
     height: 100%;
     display: flex;
@@ -291,7 +296,7 @@ p:last-child { margin-bottom: 0; }
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 80px 40px; /* Ajuste: 80px de espacio vertical, 40px de espacio horizontal */
 }
 .feature-item { text-align: left; }
 .feature-item h3, .work-step h3 {
@@ -361,7 +366,7 @@ p:last-child { margin-bottom: 0; }
 /* --- SECCIÓN CÓMO FUNCIONA --- */
 .work-steps-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* CAMBIO: Vuelve a 3 columnas */
     gap: 40px;
     margin-top: 20px;
 }
@@ -373,13 +378,17 @@ p:last-child { margin-bottom: 0; }
 .footer-section .section-title {
     margin-bottom: 40px;
 }
-.contact-intro { max-width: 800px; margin: 0 auto 60px auto; }
+.contact-intro { max-width: 800px; margin: 0 auto 20px auto; }
+.contact-email-info {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
 .contact-form {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
 }
-/* Estilo para el mensaje de agradecimiento */
 .thank-you-message h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -457,10 +466,9 @@ p:last-child { margin-bottom: 0; }
 /* --- ANIMACIONES --- */
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
-.feature-item:nth-child(2), .work-step:nth-child(2) { transition-delay: 0.2s; }
-.feature-item:nth-child(3), .work-step:nth-child(3) { transition-delay: 0.4s; }
-.feature-item:nth-child(5) { transition-delay: 0.2s; }
-.feature-item:nth-child(6) { transition-delay: 0.4s; }
+.work-step:nth-child(2) { transition-delay: 0.2s; }
+.work-step:nth-child(3) { transition-delay: 0.4s; }
+/* CAMBIO: Eliminado el delay del 4to paso */
 
 
 /* --- RESPONSIVIDAD --- */
@@ -468,7 +476,8 @@ p:last-child { margin-bottom: 0; }
     .container, .main-nav { padding: 0 30px; }
     h2.section-title { font-size: 1.8rem; }
     .hero-overlay h1 { font-size: 8vw; }
-    .features-grid, .work-steps-container { grid-template-columns: 1fr 1fr; }
+    .features-grid { grid-template-columns: 1fr 1fr; }
+    .work-steps-container { grid-template-columns: 1fr 1fr; }
     .content-row { flex-direction: column; }
     .text-column { padding-right: 0; }
     .form-row { flex-direction: column; gap: 25px; margin-bottom: 0; }
