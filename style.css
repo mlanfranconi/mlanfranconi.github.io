@@ -296,7 +296,7 @@ p:last-child { margin-bottom: 0; }
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 80px 40px; /* Ajuste: 80px de espacio vertical, 40px de espacio horizontal */
+    gap: 80px 40px;
 }
 .feature-item { text-align: left; }
 .feature-item h3, .work-step h3 {
@@ -366,7 +366,7 @@ p:last-child { margin-bottom: 0; }
 /* --- SECCIÓN CÓMO FUNCIONA --- */
 .work-steps-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* CAMBIO: Vuelve a 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 20px;
 }
@@ -389,14 +389,15 @@ p:last-child { margin-bottom: 0; }
     margin: 0 auto;
     text-align: left;
 }
+/* CAMBIO: Reducir tamaño de letra del mensaje de agradecimiento */
 .thank-you-message h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 .thank-you-message p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .form-row {
@@ -468,7 +469,6 @@ p:last-child { margin-bottom: 0; }
 .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
 .work-step:nth-child(2) { transition-delay: 0.2s; }
 .work-step:nth-child(3) { transition-delay: 0.4s; }
-/* CAMBIO: Eliminado el delay del 4to paso */
 
 
 /* --- RESPONSIVIDAD --- */
@@ -476,8 +476,7 @@ p:last-child { margin-bottom: 0; }
     .container, .main-nav { padding: 0 30px; }
     h2.section-title { font-size: 1.8rem; }
     .hero-overlay h1 { font-size: 8vw; }
-    .features-grid { grid-template-columns: 1fr 1fr; }
-    .work-steps-container { grid-template-columns: 1fr 1fr; }
+    .features-grid, .work-steps-container { grid-template-columns: 1fr 1fr; }
     .content-row { flex-direction: column; }
     .text-column { padding-right: 0; }
     .form-row { flex-direction: column; gap: 25px; margin-bottom: 0; }

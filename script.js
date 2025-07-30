@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
             form_message: "¿Querés sumar algo más?",
             form_message_desc: "¡Cuantos más detalles, mejor! Si ya organizaste un retreat antes, podés contarme qué te gustó (o qué no). También podés mencionar tu destino ideal.",
             form_submit: "Enviar",
+            thank_you_title: "¡Gracias!",
+            thank_you_subtitle: "En breve, me pongo en contacto con vos :)"
         },
         en: { 
             nav_why: "WHY CHOOSING HYPE",
@@ -104,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
             form_message: "Anything else you want to add?",
             form_message_desc: "The more details, the better! If you have organized a retreat before, you can tell me what you liked (or what you didn't). You can also mention your ideal destination.",
             form_submit: "Submit",
+            thank_you_title: "Thank you!",
+            thank_you_subtitle: "I'll be in touch with you shortly :)"
         }
     };
     const langSwitcherButton = document.getElementById('lang-switcher-button');
@@ -283,6 +287,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- LÓGICA DE ENVÍO DEL FORMULARIO ---
     const form = document.getElementById('contact-form');
     const contactContent = document.getElementById('contact-content');
+    // CAMBIO: Seleccionar también el título de la sección
+    const contactTitle = document.querySelector('#hablemos .section-title');
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -295,10 +301,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }).then(response => {
             if (response.ok) {
+                const currentLang = document.documentElement.lang || 'es';
+                const thankYouTitle = translations[currentLang].thank_you_title;
+                const thankYouSubtitle = translations[currentLang].thank_you_subtitle;
+
+                // CAMBIO: Ocultar el título "¡Hablemos!"
+                if(contactTitle) {
+                    contactTitle.style.display = 'none';
+                }
+
                 contactContent.innerHTML = `
                     <div class="thank-you-message">
-                        <h2>¡Gracias!</h2>
-                        <p>En breve, me pongo en contacto con vos :)</p>
+                        <h2>${thankYouTitle}</h2>
+                        <p>${thankYouSubtitle}</p>
                     </div>
                 `;
             } else {
