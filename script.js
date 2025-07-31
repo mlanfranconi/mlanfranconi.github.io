@@ -151,12 +151,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- LÓGICA CARRUSEL DE IMPACTO ---
-    const carouselA = document.getElementById('impact-carousel-a');
-    const carouselB = document.getElementById('impact-carousel-b');
-    const impactImages = [
-        'images/header/grupal.jpg', 'images/header/rafting.jpg', 'images/header/rafting1.jpg',
-        'images/header/brindis.jpg', 'images/header/charla.jpg', 'images/header/cena.jpg'
-    ];
+const carouselA = document.getElementById('impact-carousel-a');
+const carouselB = document.getElementById('impact-carousel-b');
+const impactImages = [
+    'images/header/grupal.jpg', 
+    'images/header/rafting.jpg', 
+    'images/header/rafting1.jpg',
+    'images/header/florytomi.jpeg',
+    'images/header/charla.jpg', 
+    'images/header/cena.jpg'
+];
     let currentImpactIndex = 0;
     let activeLayer = carouselA;
 
